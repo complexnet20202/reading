@@ -68,13 +68,36 @@
 	amistades no tiene límite fijo como el primer modelo, y tener pocos o muchos
 	amigos no es especialmente raro como en el segundo modelo.
 
-	Se denomina a estas redes como redes de libre escala, que son un modelo muy
-	común en el área de redes. Empíricamente, estas se rigen por una regla de 
-	adjunción preferencial. Esto es nuevas adyacencias prefieren nodos de grando
-	alto.
+	Se denomina a estas redes como redes de libre escala y aparecen en todo tipo 
+	de redes reales. Empíricamente, estas se rigen por una regla de adjunción 
+	preferencial. Esto es nuevas adyacencias prefieren nodos de grando alto.
 
 	Intuitivamente, significa que una persona con muchos amigos puede conocer a
-	más personas y hacer más amigos que una persona con pocos amigos. De la 
-	misma manera, sitios web populares atraen a más gente, y ciudades 
-	importantes atraen proyectos de infraestructura mayores.
+	más personas y hacer más amigos que una persona con pocos amigos.
+
+	Hay muchos nodos de grado pequeño, pero también hay una cantidad
+	considerable de nodos de grados altos. Representan los puntos importantes de
+	tránsito de la red, como personas populares, o routers imporantes. El hecho
+	de que haya varios hace este tipo de redes robustas a fallas, pues hay rutas
+	alternativas para un camino necesario.
+
+	¿Y cuál es su distribución? En la propuesta original de estas redes, se las
+	describió usando una distribución de leyes de potencias $F(x) = 
+	\frac{1}{x^k}$. Pero estudios recientes han observado que si bien esta
+	distribución es común, muchos fenómenos con adyacencia preferencial siguen 
+	más bien distribuciones exponenciales o log-normales.
+
+	Al ser todo esto una ciencia donde los objetos de estudio surgen 
+	naturalmente, la caracterización de estas redes sigue siendo un punto de 
+	discución.
+
+	\section*{Ejericios}
+
+	\begin{enumerate}
+		\item Muchos ciclos.
+		\item Cuatro personas, en los vértices de un tetraedro
+		\item Habría que modelarlo con una digráfica.
+		\item $\frac{n(n-1)}{2}$.
+	\end{enumerate}
+
 \end{document}
