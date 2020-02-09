@@ -1,14 +1,13 @@
-%Margenes, idioma y tipo de documento
-\documentclass[12pt]{extreport}
-\usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
+% formato y tipo de documento
+\documentclass[12pt, letterpaper]{article}
 \usepackage[margin = 1.5cm]{geometry}
 
+% cambiando la fuente
+\renewcommand{\familydefault}{\sfdefault}
 
+% redefiniendo título para seguir las especificaciones del curso
 \makeatletter
-\renewcommand{\maketitle}{
-    \bgroup\setlength{\parindent}{0pt}
-
+\renewcommand{\@maketitle}{
     \begin{flushright}
         \@author
     \end{flushright}
@@ -16,11 +15,10 @@
     \begin{flushleft}
         \textbf{\@title}
     \end{flushleft}
-
-    \egroup
 }
 \makeatother
 
+% datos del título
 \title{
     Lectura 04\\ 
     ``Never Underestimate the Intelligence of Trees''
@@ -38,9 +36,35 @@
 
     Por medio de conexiones de hongos en sus raíces, diferentes árboles son 
     capaces de intercambiar recursos, detectar parentezco e informar acerca de
-    plagas o demás peligros. Estas conexiones forman:w
-     una red libre de escala, el
+    plagas o demás peligros. Estas conexiones forman una red libre de escala, el
     mismo tipo de red que formas las neuronas en un cerebro humano.
 
-    ¿En qué nivel de inteligencia entra este comportamiento?
+    Este tipo de redes proveen una estrucutra robusta para interacciones 
+    complejas entre los individuos.
+
+    En este caso, un árbol reacciona a la información y a los recursos 
+    recibidos, pero estas conexiones van más allá.
+    En sus experimentos, Simard ha registrado que un árbol puede reconocer a sus
+    crías y reaccionar diferente dependiendo de las necesidades. 
+    Por ejemplo, un árbol es capaz de matar a sus crías si detecta que sus 
+    condiciones no son favorables. 
+    También se ha registrado como si un árbol detecta que las condiciones son 
+    favorables, pero aún así hay algún árbol joven con carencia de recursos, 
+    el árbol madre proveera hasta que la cría se recupere.
+
+    Y este comportamiento no sólo es una reacción. Simard indica que analizando
+    los anillos de los árboles, se obtiene una idea sobre las interacciones
+    importantes históricas que ha tenido el árbol. Los árboles recuerdan y 
+    actuan en base esos recuerdos.
+
+    Más que sólo dar nuevas perspectivas para la botánica, esto lleva a un 
+    replantiamiento sobre el concepto de inteligencia, que Samard opina está 
+    basado únicamente en la inteligencia animal en la ciencia occidental. 
+    Aunque no sea fácil de percibir, resulta que las plantas presentan un 
+    comportamiento inteligente y una forma de consciencia sobre sí mismos, su 
+    entorno y sus semejantes.
+
+    Hay que ser más responsables y respetuoso con el mundo vegetal. No sólo por 
+    su increíble complejidad, si no porque estas dos cosas deben estar presentes
+    para mejorar la sociedad.
 \end{document}
