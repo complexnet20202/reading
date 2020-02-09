@@ -1,0 +1,46 @@
+%Margenes, idioma y tipo de documento
+\documentclass[12pt]{extreport}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 1.5cm]{geometry}
+
+
+\makeatletter
+\renewcommand{\maketitle}{
+    \bgroup\setlength{\parindent}{0pt}
+
+    \begin{flushright}
+        \@author
+    \end{flushright}
+
+    \begin{flushleft}
+        \textbf{\@title}
+    \end{flushleft}
+
+    \egroup
+}
+\makeatother
+
+\title{
+    Lectura 04\\ 
+    ``Never Underestimate the Intelligence of Trees''
+}
+\author{
+    Soto Corderi Sandra del Mar\\
+    Quiroz Castañeda Edgar \\
+}
+
+\begin{document}
+    \maketitle
+    Suzanne Simard, profesora en el Departamento de Bosques y Conservación en la
+    Universidad de Columbia Británica, ha pasado lo últimos veinte años 
+    estudiando como los árboles se comunican a través de sus raíces.
+
+    Por medio de conexiones de hongos en sus raíces, diferentes árboles son 
+    capaces de intercambiar recursos, detectar parentezco e informar acerca de
+    plagas o demás peligros. Estas conexiones forman:w
+     una red libre de escala, el
+    mismo tipo de red que formas las neuronas en un cerebro humano.
+
+    ¿En qué nivel de inteligencia entra este comportamiento?
+\end{document}
