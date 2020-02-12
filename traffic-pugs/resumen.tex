@@ -1,0 +1,97 @@
+% formato y tipo de documento
+\documentclass[12pt, letterpaper]{article}
+\usepackage[margin = 1.5cm]{geometry}
+
+% cambiando la fuente
+\renewcommand{\familydefault}{\sfdefault}
+
+% redefiniendo título para seguir las especificaciones del curso
+\makeatletter
+\renewcommand{\@maketitle}{
+    \begin{flushright}
+        \@author
+    \end{flushright}
+
+    \begin{flushleft}
+        \textbf{\@title}
+    \end{flushleft}
+}
+\makeatother
+
+% datos del título
+\title{
+    Lectura 03\\ 
+    ``La física de la congestión de tráfico''\\
+    ``Transición de fase en epidemias''
+}
+\author{
+    Soto Corderi Sandra del Mar\\
+    Quiroz Castañeda Edgar \\
+}
+
+\begin{document}
+    \maketitle
+
+    \section*{Tráfico}
+
+    El tráfico en las grandes ciudades siempre ha sido un gran problema. Medidas
+    para reducirlo, como tarifas de congestión, no funcionan de manera óptima 
+    por la naturaleza compleja de las decisiones humanas que hay en el tráfico.
+
+    Usando herramientas de la física estadística, se puede modelar el tráfico 
+    como un problema de $N$ cuerpos en fuerte interacción. La modelación del 
+    tráfico como un fluido que transiciona de fluido a denso permite estudiar 
+    las situaciones donde el tráfica aumenta o disminuye significativamente.
+
+    Recientemente, modelando el problema como una red compleja, se
+    desarrolló el método de tarifas llamado \textit{Hotspring Pricing}. Este 
+    consiste en penalizar únicamente las intersecciones atascadas el lugar de 
+    toda una región céntrica. Esto para incentivar que los conductores tomen 
+    rutas alternas. Se simula el flujo de los vehículos usando una
+    ecuación de balance por intersección y las desiciones de los conductores 
+    dado el tráfico usando elasticidad.
+
+    En las simulaciones realizadas, se muestra como este método podría reducir 
+    significativamente el tráfico en Madrid.
+    Esto es un gran ejemplo de como la física de sistemas complejos ayuda a
+    resolver un problema importante de la vida real.
+
+
+    \section*{Epidemias}
+
+    Una epidemia es algún suceso donde hay contagio, como enfermedades, rumores,
+    videos virales, etc. El éxito de una epidemia es algo complejo.
+
+    Hay tres factores relevantes.
+    La ley de los especiales, que indica que no todos los individuos 
+    tiene la mismca capacidad de propagación.
+    El factor de gancho, la efectividad del fenómeno para ser transmitido. 
+    Y el poder del contexto, que indica que tan suceptible es el 
+    ambiente.
+
+    Hay dos modelos populares. 
+    En SIS, cada individuo suceptible se infecta con
+    una probabilidad $\beta$ al tener contacto con un infectado.Y cada individuo
+    infectado se recupera a suceptible con una probabilidad $\mu$. En SIR, lo 
+    único que cambia es que al un infectado sanar, desarrolla inmunidad al 
+    virus.
+
+    Usándolos, se pueden formular los factores
+    usando redes. Los especiales son nodos de alto grado, el gancho es
+    proporcinal a $\beta$ y el contexto es la estrucutura conexa de la red.
+    
+    Se busca encontrar los puntos en los que la epidemia pasa a
+    un estado incontrolable o cuando se extingue. Es física, esto se conoce como
+    transición de fase, y es medido por un parámetro de orden. Las
+    discontinuidades de este parámetro marcan los puntos críticos del cambio de
+    fase.
+
+    Algo útil es suponer que todos los nodos del mismo grado son idénticos. Esto 
+    se conoce como aproximar un campo medio heterogéneo.
+
+    Teóricamente, cuando hay una cantidad infinita de nodos en un campo
+    heterogéneo, el virus no desaparece. Pero en la práctica, esto no sucede.
+    Hay métodos recientes para aproximar estos valores en casos reales.
+
+    Aún así, muchos aspectos siguen siendo temas abiertos de invertigación.
+\end{document}
