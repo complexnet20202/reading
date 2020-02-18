@@ -1,0 +1,79 @@
+%Margenes, idioma y tipo de documento
+\documentclass[12pt]{extreport}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 1.5cm]{geometry}
+
+
+\makeatletter
+\renewcommand{\maketitle}{
+	\bgroup\setlength{\parindent}{0pt}
+
+	\begin{flushright}
+		\@author
+	\end{flushright}
+
+	\begin{flushleft}
+		\textbf{\@title}
+	\end{flushleft}
+
+	\egroup
+}
+\makeatother
+
+\title{
+	Lectura 06\\ 
+	``The Big Idea Behind Big Data''
+	}
+\author{
+	Quiroz Castañeda Edgar \\
+	Soto Corderi Sandra del Mar
+	}
+
+\begin{document}
+	\maketitle
+	
+	Durante el inicio de la epidemia del H1N1, científicos en el Centro para el
+	Control de las Enfermedades (CDC) predijeron exitosamente como evolucionaría
+	la epidemia. Con esto, salvaron muchas vidas y previnieron potenciales 
+	desastres económicos.
+
+	Para esto modelaron la epidemia usando redes. 
+	
+	Este tipo de redes surge naturalmente en muchos ámbitos, como redes 
+	sociales, cadenas alimenticias, redes de comercio, o interacción entre 
+	genes.
+
+	Y esto se conoce desde hace inicios del siglo pasado. Pero este tipo de 
+	redes son enormes, y están altamente conectadas. Por lo que su 
+	comportamiento tiene una complejidad muy alta. 	No había sido posible 
+	manejar esta cantidad de información hasta que las computadoras tuvieron 
+	dicha capacidad a finales del siglo pasado.
+
+	Con este recursos de análisis, se pudieron encontrar propiedades inesperadas.
+	Por ejemplo, resulta que en general, bastan seis personas para encontrar una
+	trayectoria de conocidos entre dos habitantes de Estados Unidos. Es decir, 
+	el diámetro de la red es aproximadamente 6. Esta red muestra un mundo 
+	pequeño.
+
+	Otra propiedad, es que la mayoría de las redes tienen una estrucutra 
+	similar. Tanto el internet como el genóma humano muetras una estrucura libre
+	de escala. Esto significa que es suficiente estudiar una estructura 
+	abstracta para obtener muchas propiedades presentes en todas las redes.
+
+	Estas propiedades inesperadas revelan la utiliad de una nueva perspectiva. 
+	No es necesario estudiar las unidades básicas de algo para entenderlo. Hay 
+	aspectos que sólo surgen cuando se tiene un sistema más complejo. Estudiar 
+	algunos fenómenos desde la tería de redes permite un acercamiento desde lo
+	más general. Y esto a su vez permite estudiar fenómenos tan grandes que 
+	anteriormente no era factible estudiar.
+
+	Por último, la teoría de redes permite estudiar el mundo creado por los 
+	humanos. Esto podría ser peligroso si se usara con fines equivocados.
+
+	La teoría de redes es la primer ciencia que surge de la revolución digital, 
+	y ha dado herramientas fundamentales para entender nuestro mundo hoy en día.
+	Entre más conocemos sobre nuestro mundo, es necesario entender las 
+	implicaciones y posibles riesgos los descubrimientos.
+	
+\end{document}
