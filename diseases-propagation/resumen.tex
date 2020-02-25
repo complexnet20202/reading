@@ -1,0 +1,90 @@
+% formato y tipo de documento
+\documentclass[12pt, letterpaper]{article}
+\usepackage[margin = 1.5cm]{geometry}
+
+% cambiando la fuente
+\renewcommand{\familydefault}{\sfdefault}
+
+% redefiniendo título para seguir las especificaciones del curso
+\makeatletter
+\renewcommand{\@maketitle}{
+    \begin{flushright}
+        \@author
+    \end{flushright}
+
+    \begin{flushleft}
+        \textbf{\@title}
+    \end{flushleft}
+}
+\makeatother
+
+% datos del título
+\title{
+    Lectura 08\\ 
+    ``Why don't patients get sick in sync? Modelers find statistical clues''
+}
+\author{
+    Soto Corderi Sandra del Mar\\
+    Quiroz Castañeda Edgar \\
+}
+
+\begin{document}
+    \maketitle
+
+    En 1950, el epidemólogo Philip Sartwell encontró que históricamente, las
+    epidemias de tifoidea, polio, malaria y sarampión tenían en común que el 
+    periodo de incubación seguía una distribución lognormal. Esto resulto 
+    difícil de explicar, pues los mecanismos de infección de estas enfremedades
+    no tienen mucho en común.
+    
+    Hace poco Jacob Scott, oncólogo en la Clínica de Cleyeland, et al. 
+    desarrollaron un modelo matemático de crecimiento de tumores que resulta en
+    este tipo de distribución. Si bien los mecanismo de infección varía entre
+    tumores y otras enfermedades, esto muestra como las concepciones actuales
+    sobre periodos de incubación no son del todo correctas.
+
+    La idea general de este modelo es considerar a las células como una red 
+    donde la adyacencia está dada por la cercanía de las células. Cuando una 
+    célula muere, una célula infectada puede tomar su lugar. 
+
+    Al inicio, la mayoría de las células muertas son sanas, por lo que la 
+    infección se propaga rápido. Pero entre más células infectadas haya, menos 
+    tejido por infectar hay. Como la infección se transmite por contacto, la 
+    infección se ralentiza en cuanto más tiempo pasa.
+
+    Dependiendo del sistema inmune de cada persona, la cantidad de tejido 
+    infectado necesario para mostrar síntomas varía. Como la infección se va 
+    ralentando, llegar a este punto crítico varía mucho entre personas, lo que 
+    da lugar a la distribución lognormal.
+
+    Steven Strogatz propuso que la distribución lognormal observada por Sartwell
+    se puede deber a que las enfermedades se incuban siguiendo un modelo de 
+    células sanas e infectadas.
+
+    Pero que este mecanismo no es verdad por ejemplo para infecciones virales.
+    Sin embargo Katia Koelle, ecóloga en la Universidad de Emory, hace notar que
+    estos fenómenos también siguen una distribución lognormal.
+
+    Una posible explicación, que ignora el arreglo de las células, es que si una
+    enfermedad crece de forma exponencial y la población es expuesta de forma
+    normal, esto resulta en una incubación lognormal.
+
+    Este extraño caso hace notar que falta mucho por descubrir para entender 
+    como se propagan e incuban enfermedades. Esto permitiría mejorar los métodos
+    de contención de epidemias, entre otras cosas.
+
+    Por su parte, Strogatz et al. publicaron recientemente en revistas de 
+    biología, con el fin de llamar la atención para probar todos estos modelos 
+    matemáticos con datos reales.
+
+    \section*{Comentario}
+    Resulta fascinante como fenómenos observados hace tanto sigan sin 
+    explicación.
+
+    Y como en tiempo moderno finalmente se les está dando algún tipo de 
+    explicación, aunque sea parcial.
+
+    Es muy importante continuar esta línea de investigación no sólo para 
+    entender los procesos de incubación, sino para poder desarollar medidas de 
+    prevención lo más efectivas posible.
+\end{document}
