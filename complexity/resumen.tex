@@ -1,0 +1,55 @@
+%Margenes, idioma y tipo de documento
+\documentclass[12pt]{extreport}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 1.5cm]{geometry}
+
+
+\makeatletter
+\renewcommand{\maketitle}{
+	\bgroup\setlength{\parindent}{0pt}
+
+	\begin{flushright}
+		\@author
+	\end{flushright}
+
+	\begin{flushleft}
+		\textbf{\@title}
+	\end{flushleft}
+
+	\egroup
+}
+\makeatother
+
+\title{
+	Lectura 05\\ 
+	``Why Complexity is Different''}
+\author{
+	Quiroz Castañeda Edgar \\
+	Soto Corderi Sandra del Mar
+	}
+
+\begin{document}
+	\maketitle
+	
+	El problema de la diferencia entre sistemas complejos y los simples está en las propiedades del sistema que estudiamos, ya que podemos seguir agregando propiedades indefinidamente para satisfacer los cambios o complementar la información del sistema.
+	
+	Estas ideas se originan en una aproximación llamada separación de escalas. Un ejemplo de esto es tomar un bloque donde en una escala estudiamos las partículas y en la otra el movimiento que realiza en la superficie.
+	Otro ejemplo sería la tierra donde podemos ver que la escala de lo que pasa dentro de ella no influye en la escala de su órbita. Cuando la separación de escalas funciona, podemos describir no solo el sistema que existe aislado, pero también como reacciona a fuerzas exteriores.\\
+	
+	Para sistemas complejos queremos analizar lo que se relacione con la mayor escala de la información. Pero muchos sistemas, especialmente los que estudian comprensión e influencia no se describen correctamente al separar las micro y macro escalas. Es mejor utilizarlas  para comportamientos que no sean independientes ni coherentes.\\
+	
+	Podemos ver la importancia de las ideas multiescala en física estadística. En la escala microscópica el comportamiento de los átomos no es importante para el observador o para la manipulación del sistema y en la escala macroscópica las propiedades que observamos y manipulamos reflejan generales o agregadas del movimiento atómico. 
+	
+	Pero hay fenómenos donde la separación de escalas se rompe, un ejemplo de esto es el agua y el vapor, cuando subimos la temperatura y aumenta la presión del agua para convertirse en vapor, hay un punto donde esta transición para y ya no se puede distinguir al agua del vapor. La forma en que lo hace es con una ley de potencia donde el valor de una de las variables difiere con los resultados empíricos y las predicciones teóricas. De ahí podemos ver como el cálculo y la estadística fallan en este punto.
+	
+	Para resolver matemáticamente este problema, se desarrolló el grupo de renormalización. En este método  consideramos el sistema a múltiples escalas y las propiedades del sistema se pueden encontrar viendo cómo el comportamiento cambia entre las escalas. También se describen cuales parámetros de la interacción son relevantes (aumenta entre las escalas) y cuales no (disminuyen con la escala). 
+	
+	Definimos un perfil de complejidad como la cantidad de información necesario para representar un sistema como una función de escala. Aquí lo que buscamos es describir el sistema con los parámetros más relevantes.\\
+	
+	La universalidad en los grupos de renormalización la podemos ver reflejada en como la representación matemática de un sistema en una escala particular puede corresponder al comportamiento de otros sistemas sin importar sus componentes específicos.
+	
+	
+	
+
+\end{document}

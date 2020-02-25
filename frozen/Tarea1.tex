@@ -1,0 +1,100 @@
+%Margenes, idioma y tipo de documento
+\documentclass[12pt]{extreport}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 1.5cm]{geometry}
+
+%Algunas símbolos matemáticos (letras caligráficas)
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{lipsum}
+
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+	\begin{flushright}
+		\@author
+	\end{flushright}
+	\begin{flushleft}
+		\textbf{\@title}
+	\end{flushleft}
+	\egroup
+}
+\makeatother
+
+\title{Lectura 01\\ WHO IS THE MOST IMPORTANT CHARACTER IN FROZEN? WHAT NETWORKS CAN TELL US ABOUT THE WORLD}
+\author{%
+	Quiroz Castañeda Edgar \\
+	Soto Corderi Sandra del Mar
+	 }
+
+\pagestyle{empty} % disables page numbers
+
+\begin{document}
+	\maketitle
+	\thispagestyle{empty} % single page disable page number
+	
+	¿Cómo podemos determinar la importancia de los personajes dentro de una 
+	película sin tener que verla? Esto se puede resolver analizando la 
+	estructura de las interacciones de los personajes. 
+	
+	Esta estructura de personas junto con las relaciones de ellas se denomina 
+	\textbf{red social}. 
+	
+	Una utilidad de estas redes, es que permiten predecir como podría viajar el
+	conocimiento.
+	Tomando a Frozen como ejemplo, Anna descubre que su hechizo puede ser curado 
+	con amor verdadero gracias a los trolls, quienes conoce a través de Kristoff.
+	\\	
+
+	¿Pero cómo se puede usar esta red social para determinar la importancia de 
+	los personajes? Hay varias maneras.
+
+	Por ejemplo, supongamos que la importancia de un personaje está dada por la 
+	cantidad de personajes con las que interactúa. En ese caso, Anna es la 
+	protagonista, seguida por Elsa y luego Kristoff.
+
+	Este número se denomina el grado de la persona, y es una manera de medir la 
+	importancia de algún personaje, aunque no es la única.
+	\\
+
+	El grado da una idea de como es un personaje respecto a sus amigos, pero se puede 
+	generalizar para obtener un análisis más profundo.
+
+	Para esto, se puede pensar que todos los personajes comienzan con un valor 
+	de 1. Luego, cada personaje suma todos los valores de sus vecinos (sus amigos). 
+	Después de una ronda, cada personaje tiene su grado. Luego de dos rondas, 
+	cada personajes tiene información sobre sus vecinos, y sobre los vecinos de 
+	sus vecinos. Estos números reciben el nombre de $\bf{eigenvector\ de\ centralidad}$.
+	
+	Siguiendo este proceso y normalizando a cada paso, se obtiene una idea sobre
+	que tan influyente podría llegar a ser el personaje.
+	
+	Usando esta técnica y tomando en cuenta la frecuencia con la que los 
+	personajes hablan entre sí, Anna sigue siendo la protagonista, pero ahora 
+	Kristoff queda en segundo lugar y Elsa en tercero.
+	\\
+	
+	Pero en una película, la importancia no sólo está dada por la cantidad de 
+	interacciones. En Frozen, se puede decir que Elsa es la protagonista ya que 
+	su magia es el conflicto principal de la historia. 
+	
+	¿Cómo se determina esto? Se pueden estudiar eventos, sus causas y  
+	consecuencias en otros eventos. Se denomina una \textbf{red narrativa}.
+	Esta red es bastante más complicada, pero se pueden hacer análisis similares
+	a los anteriores. Y probablemente resulte que el eigenvalor de centralidad 
+	de Elsa sea mayor al de Anna.
+	\\
+	
+	¿Acaso esto tiene alguna relevancia más allá de Frozen?
+	Pues resulta que redes similares están presentes en nuestra vida diaria.
+	Un ejemplo muy claro de esto es la Internet,
+	otro son las interacciones ecológicas que ocurren en la naturaleza, 
+	siendo una la cadena alimenticia.
+	En ambos casos, es útil saber que cuanto cambiaría la red de remover un 
+	individuo, o saber cuantos pasos toma llegar de un punto a otro.
+	\\
+	
+	Actualmente, los científicos están investigando formas de estudiar 
+	situaciones más complejas, como redes dinámicas o  que modelen diversos tipos de relación al mismo tiempo. 
+\end{document}
