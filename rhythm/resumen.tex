@@ -1,0 +1,78 @@
+%Margenes, idioma y tipo de documento
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 1.5cm]{geometry}
+
+% cambiando la fuente
+\renewcommand{\familydefault}{\sfdefault}
+
+\makeatletter
+\renewcommand{\maketitle}{
+	\bgroup\setlength{\parindent}{0pt}
+
+	\begin{flushright}
+		\@author
+	\end{flushright}
+
+	\begin{flushleft}
+		\textbf{\@title}
+	\end{flushleft}
+
+	\egroup
+}
+\makeatother
+
+\title{
+	Lectura 09\\ 
+	``The Beats That Keep The Beat''
+	}
+\author{
+	Quiroz Castañeda Edgar \\
+	Soto Corderi Sandra del Mar
+	}
+
+\begin{document}
+	\maketitle
+	
+	
+	Explicar un poco lo del perico, la foca creepy, los monos bateristas y el 
+	leon marino groovy.
+
+	Edawrd Large y Joel Snyder, neurologos, observaron que ciertas señales 
+	dentro de las partes del cerebro correspondientes al audio y al movimiento
+	sincronizaban su frecuencia con la música en el entorno, tanto en humanos 
+	como en animales no verbales.
+
+	A raíz de estos fenómenos, surgieron dos teorías para explicar esto.
+
+	Primero, es que el ritmo es un producto secundario de la habilidad de 
+	tener algún tipo de habla. Esto es la capacidad de imitar sonidos que no son
+	naturales. Como elefantes imitando camiones, o pericos imitando humanos.
+	Según esta explicación, la habilidad de hablar fortaleció lo suficiente las 
+	conexiones entre sensación auditiva y habilidad motriz para poder reaccionar 
+	al ritmo. Todos los animales presentan esto, pero sólo en aquellos con habla
+	las conexiones son lo suficientemente fuertes como para manifestarse como 
+	un sentido rítmico musical.
+
+	Otra explicación indica que el ritmo es algo innato de todo cerebro, pues 
+	este es necesario para su funcionamiento. Así que la expresión rítmica 
+	depende más del ambiente que de las conexiones neuronales por especie.
+	Animales sociales con alta inteligencia son más propicios a imitar y
+	aprender, y por lo tanto a desarrolar ritimo, pero bajo circunstancias 
+	adecuadas, se ha visto como gran variedad de animales puede desarrollarlo.
+
+	En este caso, el ritmo humano no tiene nada de especial. Es sólo que la 
+	condición humana propicia el desarrollo de una habilidad presente en todos 
+	los animales.
+	
+	\section*{Comentario}
+	Lo más natural sería que todos los cerebros animales posean la estructura 
+	neuronal suficiente para tener la habilidad de comprensión musical y la 
+	manera en que se exprese depende del ambiente. Por ejemplo los pericos, las 
+	focas y elefantes al ser animales sociales con capacidad de reproducir 
+	sonidos tienen más facilidad para entender el ritmo. Mientras que otros 
+	animales como los leones marinos y los monos con el entrenamiento adecuado 
+	y en el ambiente correcto son capaces de hacerlo.
+	
+\end{document}
