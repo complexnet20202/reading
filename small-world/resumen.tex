@@ -1,0 +1,82 @@
+%Margenes, idioma y tipo de documento
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 1.5cm]{geometry}
+
+% cambiando la fuente
+\renewcommand{\familydefault}{\sfdefault}
+
+\makeatletter
+\renewcommand{\maketitle}{
+	\bgroup\setlength{\parindent}{0pt}
+
+	\begin{flushright}
+		\@author
+	\end{flushright}
+
+	\begin{flushleft}
+		\textbf{\@title}
+	\end{flushleft}
+
+	\egroup
+}
+\makeatother
+
+\title{
+	Lectura 10\\ 
+	``Collective dynamics of `small-world' networks''
+	}
+\author{
+	Quiroz Castañeda Edgar \\
+	Soto Corderi Sandra del Mar
+	}
+
+\begin{document}
+	\maketitle
+	
+	Las redes dinámicas se han usado para modelar diversos tipos de sistemas 
+	autoorganizables. En estos modelos se suele suponer una estructura regular o
+	aleatoria. Pero empíricamente, la mayoría de las redes caen en un punto 
+	intermedio. 
+	
+	Para entender ese `punto medio', se introduce desorden en una red regular.
+	Puntualmente, partiendo de un anillo de $n$ nodos donde cada nodo tiene $k$
+	enlaces, se itera sobre todos los enlaces y se reconecta con probabilidad 
+	$p$ a nodo aleatorio. $p = 0$ es una red regular y $p = 1$ es una red 
+	aleatoria.
+
+	Se observó como incrementando $p$ el coeficiente de clusttering $C$ 
+	disminuye de forma lenta (alto en redes reguales) pero la distancia promedio
+	$L$ disminuye muy rápido (bajo en redes aleatorias). Entonces, con $p$ 
+	moderada, se tiene una red de alto $C$ y pequeña $L$.
+
+	Esto se debe a la formación de atajos importantes que disminuyen mucho la 
+	distancia sin romper la conexidad.
+	
+	Analizando la red de colaboración de actores de IMBD, la red de distribución 
+	de electricidad de EU, y la red de neuronas de una lombris, se encontró que 
+	todas éstas tenían en común estas dos propiedades. Por su naturaleza de
+	atajos, se les nombró redes de mundo pequeño.
+
+	Para estudiar más posibles propiedades de estas redes, se hicieron varias 
+	simulaciones.
+
+	Para epidemias, resulta que el coeficiente de contagio $r$ y el tiempo para 
+	la infecció total $T$ son relativamente pequeños.
+
+	En autómatas celulares, una estrucutra de mundo pequeño para tareas de 
+	clasificación mejoró todo método conocido.
+
+	En teoría de juegos, resulta que entre más incremente $p$, surge menos 
+	cooperación.
+
+	Nodos osiladores de fase se sincronizan casi de inmediato, de forma muy 
+	similar a neuronas en el cerebro.
+
+	Todos estos descubrimientos son con el propósito de abrir líneas de 
+	investigación de redes en diferentes campos, puesto que en el momento, es 
+	una idea muy nueva que aún tiene mucho por descubrir. Se conjetura que estos
+	patrones se repetirán en todo tipo de redes biológicas, sociales y en 
+	sistemas artificiales.
+\end{document}
