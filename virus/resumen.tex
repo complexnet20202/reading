@@ -1,0 +1,45 @@
+% formato y tipo de documento
+\documentclass[12pt, letterpaper]{article}
+\usepackage[margin = 1.5cm]{geometry}
+
+% cambiando la fuente
+\renewcommand{\familydefault}{\sfdefault}
+
+% redefiniendo título para seguir las especificaciones del curso
+\makeatletter
+\renewcommand{\@maketitle}{
+    \begin{flushright}
+        \@author
+    \end{flushright}
+
+    \begin{flushleft}
+        \textbf{\@title}
+    \end{flushleft}
+}
+\makeatother
+
+% datos del título
+\title{
+    Lectura 07\\ 
+    ``Viruses Have a Secret, Altruistic Social Life''
+}
+\author{
+    Soto Corderi Sandra del Mar\\
+    Quiroz Castañeda Edgar \\
+}
+
+\begin{document}
+    \maketitle
+    
+    Varios investigadores están comenzando a entender la manera en que los virus de manera estratégica manipulan y cooperan los unos con los otros.
+    
+    Los virus tienen interacciones sociales extensas entre ellos incluyendo comportamientos parecidos al altruismo, ya que hay grupos de bacterias que producen alimento para sus vecinos. William D. Hamilton dio una teoría matemática que explicaba la evolución del altruismo a partir de su parentesco, da una regla que dice qe el altruismo evoluciona cuando $r \times B > C$ donde B es el beneficio del destinatario, r es la relación entre el destinatario y el dador y c es el costo del dador.
+    Rafael Sanjuán realizó experimentos combinando teoría combinatoria y encontró que la forma en que diferentes conjuntos de virus pueden estar aislado importa mucho, ya que en un sistema mixto, los virus altruistas son víctimas de los tramposos que toman ventaja de sus sacrificios, pero si se pueden separar a los altruistas de los tramposos, el sistema de virus puede sobrevivir.
+    Otro aspecto que está en investigación es la razón de que varias partículas infectan una célula juntas. La respuesta que encontraron está en que si se encuentran juntas pueden contrarrestar mejor la respuesta del sistema inmune.
+    
+    
+    \section*{Comentario}
+    
+    Es fascinante ver como los sistemas de elementos que podríamos considerar no tan complejos como son las bacterias o los virus, tienen comportamientos interesantes. Uno pensaría que todas los virus deberían apoyarse entre ellos, pero no, hay unos que deciden aprovecharse de los demás para no tener que producir su propio alimento, si este tipo se encuentra lo suficientemente dispersado, puede comprometer a todo el sistema de virus.
+    Esta línea de investigación es muy importante para entender como defendernos de enfermedades en el futuro, por lo que hay que seguir atentos a los resultados futuros.
+\end{document}
