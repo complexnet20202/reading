@@ -1,0 +1,56 @@
+%Margenes, idioma y tipo de documento
+\documentclass[12pt]{extreport}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 1.5cm]{geometry}
+
+
+\makeatletter
+\renewcommand{\maketitle}{
+	\bgroup\setlength{\parindent}{0pt}
+
+	\begin{flushright}
+		\@author
+	\end{flushright}
+
+	\begin{flushleft}
+		\textbf{\@title}
+	\end{flushleft}
+
+	\egroup
+}
+\makeatother
+
+\title{
+	Lectura 12\\ 
+	``The complex network of global cargo ship movements''
+	}
+\author{
+	Quiroz Castañeda Edgar \\
+	Soto Corderi Sandra del Mar
+	}
+
+\begin{document}
+	\maketitle
+	
+	Para este proyecto se usaron los itinerarios de 16363 barcos durante 2007 para construir una red de enlaces entre puertos.
+	Se tomo una perspectiva de grande escala en un sistema complejo definido como la red de puertos que se conectan si hay tráfico marino que pasa entre ellos. Le asignamos un peso $w_{ij}$ al enlace del puerto $i$ al $j$ igual a la suma del espacio disponible en todos los barcos que han viajado en el enlace.\\
+		
+	Se toman tres clases de barcos: contenedores, graneleros y petroleros que generan distintas subredes. Algunas cosas que tienen en común las tres son su distribución de motivos (abundancia de interacciones transitivas) y el número promedio de distintos puertos por barco.
+	
+	La subred de contenedores está muy agrupada, tiene un grado promedio pequeño, un número grande de viajes por enlace (veces que pasa un barco), la distribución de peso con menor exponente, muestra 12 comunidades (grupos de puertos con muchos enlaces dentro de ellos pero con pocos entre diferentes grupos) y los barcos viajan en algunos de los enlaces varias veces durante el estudio.
+	
+	La subred de graneleros es menos agrupada, tiene un mayor grado promedio, menos cantidad de viajes, la distribución de peso con mayor exponente, muestra 7 grupos y los barcos pasan casi todos los enlaces una vez.
+	
+	Finalmente la de petroleros tiene valores intermedios, muestra 6 grupos y los barcos conmutan algunas veces entre los puertos. 
+	Hay que notar todos los valores son menores que el de la red completa.\\
+			
+	La red dirigida de toda la flota es asimétrica con 59\% de todos los pares de puertos enlazados conectados en una sola dirección. La ruta de distancia más corta promedio entre dos puertos es 2.5 y la máxima es 8. El grado promedio de un puerto en la red es 76.5. La distribución de grado muestra que muchos puertos tienen pocas conexiones, pero hay algunos enlazados a cientos de otros. Promediando las sumas de los pesos enlazados en los puertos vemos que un pequeño número de puertos manejan grandes cantidades de carga. Tiene topología de mundo pequeño donde la capacidad de los barcos sigue una distribución heavy-tailed (esto significa que la función generadora de momentos en la distribución es infinita para todo $t > 0$).\\
+	
+	Debido a la falta de información sobre la frecuencia de los viajes de los barcos, se deben hacer suposiciones, en este caso se usa el modelo popular de gravedad que dice que es más probable que puertos cercanos estén enlazados que puertos lejanos entre sí. Este modelo se ajusta a los datos de forma  bastante correcta.\\
+	
+	$\bf{Comentario}$\\
+	
+	Esta lectura fue muy informativa, ya que utilizan un sistema complejo para generar una red, la parten y analizan muchas de las características que hemos estado viendo en clase.
+	
+\end{document}
