@@ -1,0 +1,89 @@
+% formato y tipo de documento
+\documentclass[12pt, letterpaper]{article}
+\usepackage[margin = 1.5cm]{geometry}
+
+% cambiando la fuente
+\renewcommand{\familydefault}{\sfdefault}
+
+% redefiniendo título para seguir las especificaciones del curso
+\makeatletter
+\renewcommand{\@maketitle}{
+    \begin{flushright}
+        \@author
+    \end{flushright}
+
+    \begin{flushleft}
+        \textbf{\@title}
+    \end{flushleft}
+}
+\makeatother
+
+% datos del título
+\title{
+    Lectura 11\\ 
+    ``The human desease network''
+}
+\author{
+    Soto Corderi Sandra del Mar\\
+    Quiroz Castañeda Edgar \\
+}
+
+\begin{document}
+    \maketitle
+    
+    Se han hecho muchos estudios que realacionan ciertos genes con ciertas 
+    enfermedades, aunque la mayoría de los estudios son sobre casos 
+    particulares.
+    Usando toda esa información, se crea una red bipartita entre 1777 genes y 
+    1284 enfermedades con base en si un gen propicia el desarrollo de cierta 
+    enfermedad.
+
+    Tomando como base esta red, se define una red de genes (DGN) y una red de 
+    enfermedades (HDN) con las adyacencias dadas si tiene un vecino en común en
+    la red bipartita.
+
+    En la HDN , se notó que las enfermedades se agruparon en clusters. Los más 
+    grandes, como el del cáncer, incluyen gran variedad genética, como 
+    enfermedades precursoras. Pero tienen una ausencia de gran parte de las 
+    enfermedades, las cuáles forman sus propios clusters.
+
+    En ambas redes se notó que pequeño de la componente gigante. Esto muetra 
+    gran clustering entre enfermedades.
+
+    La primera hipótesis que se quiso probar con esta red es que genes en un
+    mismo clustter afectan las mismas áreas funcionales. Para esto, se apoyó de 
+    una red de interacción de proteínas. Para esto, se midieron sus habilidades
+    funcionales, su rol en el organismo y su localización en las células de las
+    proteínas relacionandos con genes en un mismo cluster. También se midió la 
+    homogeneidad de los tejidos que afectaban y sus coeficientes de correlación
+    de Pearson. En todos los casos, resultó que los genes en el mismo cluster sí
+    afectan las mismas funciones.
+    
+    La segunda hipótesis que se quería corroborar era que genes involucrados con 
+    enferemdades en general son genes escenciales con papales importantes, como
+    en la producción de proteínas activas (hubs). Resultó que hay pocos genes 
+    escenciales relacionados con enfermedades, pero estos pocos son muy activos.
+    Los genes no escenciales relacionados con enfermedades suelen actuar de 
+    forma más aislada y no están relacionados con proteínas hub.
+
+    Una explicación para esto es que mutaciones en genes importantes se expresan
+    fuertemente. De ser estas enferemedades, entonces el individuo tiene 
+    desventaja genética, y probablemente estos rasgos desaparezcan pronto.
+
+    Las únicas enfermedades que pueden perdurar son aquellas que afectan a los 
+    individuos de forma no escencial.
+
+    Usando datos extra, se verificó que la estructura general de la red no 
+    cambia, así que probablemente estos hallazgos sean válidos para el futuro.
+
+    \section*{Comentario}
+
+    Me parece impresionante que se tengan ya los recursos para analizar tan a 
+    fondo la relación entre genes y enfermedades.
+
+    Las redes proporcionan el marco de trabajo perfecto para entender las 
+    relaciones tan convolucionadas que hay en el funcionamiento biológico, y hay
+    que aprovecharlas.
+
+    Esto abre la puerta a muchos trabajos que podrían beneficiar a mucha gente.
+\end{document}
