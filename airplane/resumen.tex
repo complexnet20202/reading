@@ -1,0 +1,75 @@
+%Margenes, idioma y tipo de documento
+\documentclass[12pt]{extreport}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 1.5cm]{geometry}
+
+
+\makeatletter
+\renewcommand{\maketitle}{
+	\bgroup\setlength{\parindent}{0pt}
+
+	\begin{flushright}
+		\@author
+	\end{flushright}
+
+	\begin{flushleft}
+		\textbf{\@title}
+	\end{flushleft}
+
+	\egroup
+}
+\makeatother
+
+\title{
+	Lectura 13\\ 
+	``A DYNAMICAL MODEL FOR THE AIR TRANSPORTATION NETWORK''
+	}
+\author{
+	Quiroz Castañeda Edgar \\
+	Soto Corderi Sandra del Mar
+	}
+
+\begin{document}
+	\maketitle
+	
+	En la literatura se han modelado mucho las Redes de Transporte Aéreo pero no se ha estudiado su evolución. Así que en el proyecto de la lectura utilizan una herramienta llamada 'Scheduled Network' para poder modelar la evolución.\\
+	
+	Para modelar esta red, incluyeron un horario de los vuelos y definieron un modelo matemático de una red dirigida estática. Después añaden varios nodos secundarios que utilizan para
+	simular el paso del tiempo entre cualesquiera dos nodos y  utilizan
+	``agentes'' para apoyar la simulación. La matriz de adyacencia global es dada por la fórmula $A = [ P \| R ] / [Act \| T]$ dónde:
+	\begin{itemize}
+		\item{(P)ersistencia: permite a los agentes en nodos primarios permanecer ahí
+			indefinidamente.}
+		\item{(Act)ivación: representa el calendario. Un agente se mueve de un nodo
+			primario a un nodo secundario.}
+		\item{(R)ecepción: mueve un agente de un nodo secundario a uno primario.}
+		\item{(T)ransferencia: mueve un agente de un nodo secundario a otro. Simula
+			el paso del tiempo.}
+	\end{itemize}
+	
+	Se pueden encadenar matrices para obtener la ventana de tiempo, la cual es representada matemáticamente así:
+	\begin{center}
+		A = A(t) ... A(t + $\delta$ -1) A(t + $\delta$) = 
+		= $\prod^{t+1}_{p=t}$[dA + Act(p)]
+	\end{center}
+		
+	El modelo incluye 9 aeropuertos virtuales, los cuales están definidos por el número de pasajeros que quieren volar desde ahí y un valor que representa la atracción relativa de los nodo de pasajeros llamado conveniencia. 
+
+	Se simulan 2 situaciones principales:
+	\begin{itemize}
+		\item 
+		El caso cuando los aeropuertos tienen definiciones similares donde solamente la posición geográfica definirá la topología final de la red
+		\item 
+		Agregar un hub (un aeropuerto central donde la mayoría de vuelos converge) al modelo anterior, el cual aumentará las definiciones en 100\%.
+	\end{itemize} 
+	
+	La simulación se hace con un grupo de nodos no conectados, en cada momento que se añade un vuelo al sistema, se le da a un agente un valor e atracción para moverse de un nodo al otro, para que sea una simulación más realista. Después se calcula con un algoritmo de tipo greedy el costo del viaje según el tiempo y los pasajeros dispuestos a viajar en cada momento.\\
+	
+	De los resultados de estas simulaciones se pudo ver que la estructura de las conexiones es de la forma 'hub-and-spoke' (Todos los nodos se pueden conectar a cualesquiera otros dos nodos en un número limitado de vuelos, del origen a un hub y del hub hacia el destino) la que es considerada una configuración estándar en para las redes aeronáuticas y los hubs aparecen como consecuencia
+	del mayor volumen de pasajeros de algunos aeropuertos, y
+	no están necesariamente relacionados con su posición física.\\ 
+	
+	$\bf{Comentario}$ Fue una lectura muy ilustrativa para nosotros ya que nos dió ideas de como modelar nuestra red de manera más realista
+	
+\end{document}
