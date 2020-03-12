@@ -1,0 +1,108 @@
+% formato y tipo de documento
+\documentclass[12pt, letterpaper]{article}
+\usepackage[margin = 1.5cm]{geometry}
+
+% cambiando la fuente
+\renewcommand{\familydefault}{\sfdefault}
+
+% redefiniendo título para seguir las especificaciones del curso
+\makeatletter
+\renewcommand{\@maketitle}{
+    \begin{flushright}
+        \@author
+    \end{flushright}
+
+    \begin{flushleft}
+        \textbf{\@title}
+    \end{flushleft}
+}
+\makeatother
+
+% datos del título
+\title{
+    Lectura 14\\ 
+    ``A network theory analysis of football strategies''
+}
+\author{
+    Soto Corderi Sandra del Mar\\
+    Quiroz Castañeda Edgar \\
+}
+
+\begin{document}
+    \maketitle
+
+    El análisis de pártidos de fútbol, así como estilos de juego y evaluación 
+    de un equipo son cosas que por lo general no se puede averiguar con datos 
+    estadísticos. Esto es debido a que las puntuaciones no reflejan muy bien el 
+    desempeño del equipo. 
+
+    Pero con una gran cantidad de datos publicados por la FIFA sobre la Copa 
+    Mundial de 2010, se han desarrollado algunas técnicas basadas en redes 
+    complejdas para evaluar la estrategia de un equipo.
+
+    En este caso, se construyó una red con jugadores como nodos. Los enlaces 
+    dirigidos con peso están dados por la frecuencia en la que un jugador pasa 
+    el balón a otro. Se analizan varias medidas de conexidad y centralidad para 
+    analizar una partida.
+
+    Por ejemplo, una medida sencilla es la conexidad de enlaces. Esto se puede 
+    ver como la cantidad de pases que necesitan ser interceptados para romper el
+    flujo de un equipo.
+
+    También se definió la distancia entre dos jugadores como la suma del 
+    inverso de los pesos de las aristas. Dos jugadores son cercanos si hay 
+    muchas pases, no necesariamente pases directos, entre ellos.
+
+    Se definió el agrupamiento como la cantidad de ciclos de tres jugadores, 
+    pues esto permitiría rutas alternas para un pase. Un agrupamiento alto 
+    indica que no hay muchos jugadores que acaparen los pases.
+
+    Tomando el porcentaje de secuencias que pasan por $i$, se obtiene una idea 
+    de que tan importante es $i$ como intermediario de pases. Esto se conoce 
+    como intermediación. En general, se busca que se tenga una intermediación 
+    baja, pues indica poca dependencia de un jugador.
+
+    Además, una red donde todos los nodos están conectados con todos se 
+    conoce como un clique. El tamaño del máximo clique indica la cantidad de 
+    jugadores que hacen pases a todos entre sí.
+
+    Por último, se define la popularidad de un jugador como proporcional a la 
+    cantidad de pases que recibe, pero dando más peso a los pasos de jugadores 
+    más populares.
+
+    Con estas técnicas, se analizó el desempeño de los octavos de final. Se 
+    encontró que España y Holanda tuvieron una alta conexidad de enlaces y 
+    alto clique máximo.
+
+    España mostró un mayor cantidad de pases promedio (equipo muy dinámico), y 
+    Holanda una menor intermediación promedio (poca dependencia en jugadores 
+    específicos). En ambos casos esto refleja los estilos de ambos equipos.
+
+    Además, en el caso de estos dos, también se notó que la popularidad de los 
+    jugadores es aproximada a el ranking de importancia que le suelen dar los 
+    analistas, con España teniendo una diferencia más grande de popularidad 
+    entre jugadores.
+
+    Se obtuvieron resultados igual de acertados al evaluar a los 16 equipos. Y 
+    en especial al evaluar el desempeño por jugador de Alemania y Uruguay.
+
+    Estos métodos sólo toman en cuenta pases dentro del mismo equipo a 
+    posteriori. Cosas como la evolución temporal, las intercepciones de pases y
+    los tipos para gol podrían tomarse en cuenta para tener un análisis más 
+    detallado.
+
+    Sin embargo, como una aproximación inicial, lo estudiado aquí resultó muy 
+    acertado.
+
+    \section*{Comentario}
+
+    La disponibilidad de datos sobre gran cantidad de temas permite su análisis 
+    muy a fondo de manera que no era posible antes.
+
+    Con esto se pueden descubrir patrones que antes se le atribuían a la 
+    intuición humana y usarse para mejorar el desempeño de gran cantidad de 
+    actividades.
+
+    Es interesante ver como todo esto se desarrolla en tan diferentes ámbitos.
+
+\end{document}
